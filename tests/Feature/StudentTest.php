@@ -31,7 +31,7 @@ class StudentTest extends TestCase
     {
         $response = $this->get('/api/students/1');
         $response->assertStatus(200);
-        $this->assertEquals(100000, $response->json('id'));
+        $this->assertEquals(1, $response->json('id'));
         $this->assertEquals('John', $response->json('firstName'));
     }
 
